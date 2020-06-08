@@ -4,7 +4,12 @@ include 'include/header.php'; ?>
 <div class="container">
 
   <div class="starter-template">
-    <h1>Selamat datang di WEB A2N </h1> <br>
+  	<body style="background-image: url('background.JPEG');">
+  		<section style="background-color: white">
+    <h1>Welcome! </h1> 
+    <h3>Ingin mengakses informasi tentang website kami? Akses menu Utama.<br>
+    	Ingin menghubungi admin kami untuk penjadwalan pengangkutan sampah? Akses menu Ruang Chat.<br>Untuk melihat grafik sampah yang telah terkumpul dapat diakses pada Menu Grafik Sampah.</h3><br>
+    	</section>
 
   </div>
 
