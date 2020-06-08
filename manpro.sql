@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 08, 2020 at 04:36 PM
+-- Generation Time: Jun 08, 2020 at 07:06 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.5
 
@@ -42,11 +42,11 @@ CREATE TABLE `chart` (
 --
 
 INSERT INTO `chart` (`id`, `Userid`, `Name`, `Message`, `Date`, `Time`, `Group_Name`) VALUES
-(1, '1234554321', 'Patrick', 'What do you think about javascrpt and php after seeing this demo?', '31/05/20', '14:58:00', ''),
-(2, '1234554321', 'Patrick', 'Malawi is the warm heart of africa with beautiful lake and mountains', '31/05/20', '14:58:00', 'Malawi'),
-(3, '1234554321', 'Patrick', 'test 123', '31/05/20', '14:59:00', ''),
-(4, '1234554321', 'Patrick', 'aaa', '31/05/20', '15:34:00', ''),
-(5, '1234567890', 'Demo', 'test', '08/06/20', '15:11:00', '');
+(1, '1234567890', 'Rina', 'Halo, ini bagaimana cara saya melakukan penjadwalan angkut sampah ya?', '08/06/20', '18:31:00', ''),
+(2, '5', 'Admin', 'Selamat Malam, Ibu Rina.\r\nUntuk melakukan penjadwalan, ibu dapat masuk ke dalam Group sesuai dengan RT dan RW tempat ibu tinggal. Lalu, ibu dapat langsung mengatur waktu pengangkutan sampah dengan petugas kebersihan di masing-masing RT. Mohon untuk mengikuti tata cara pemilahan sampah. Terim Kasih:)', '08/06/20', '18:34:07', ''),
+(3, '3', 'Amanda', 'Pagi, saya ingin mengatur jadwal pengangkutan sampah hari ini. Apakah bisa?', '06/06/20', '08:40:48', 'RT 1 RW 3'),
+(4, '6', 'Petugas Kebersihan RT 1', 'Pagi bu Amanda. Bisa bu, ibu tentukan saja waktu pengangkutan diantara jam 9 pagi sampai 4 sore. Kemudian dapat dikirimkan alamat beserta nomor rumahnya ya bu.', '06/06/20', '09:45:30', 'RT 1 RW 3'),
+(5, '3', 'Amanda', 'Saya mau angkut jam 2 siang. Alamat saya di Jalan Sunda nomor 15. Yang pagernya putih.', '06/06/20', '08:50:31', 'RT 1 RW 3');
 
 -- --------------------------------------------------------
 
@@ -68,7 +68,8 @@ CREATE TABLE `groups` (
 
 INSERT INTO `groups` (`id`, `Userid`, `GName`, `Members`, `Date`) VALUES
 (1, '1234554321', 'RT 2 RW 3', '1', '31/05/20'),
-(2, '1234567890', 'RT 1 RW 3', '1', '08/06/20');
+(2, '1234567890', 'RT 1 RW 3', '1', '08/06/20'),
+(3, '1234567890', 'RT 3 RW 3', '1', '08/06/20');
 
 -- --------------------------------------------------------
 
@@ -159,9 +160,14 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `Firstname`, `Surname`, `Title`, `Phone`, `Email`, `Password`, `Online`, `Time`) VALUES
 (1, 'Nana', '', '', '265999107724', 'nana@gmail.com', 'wwww', 'Offline', 1590932194),
-(2, 'Nadhila', 'Fira', 'Miss', '08123456789', 'nadhilafira@gmail.com', '1234567890', 'Online', 1591621356),
-(3, 'Amanda', 'Manda', 'Miss', '089876543210', 'amanda@gmail.com', '1234567890', 'Online', 1591621356),
-(4, 'Demo', 'Demo', '', '0123456789', 'demo@mail.com', '1234567890', 'Online', 1591621356);
+(2, 'Nadhila', 'Fira', 'Miss', '08123456789', 'nadhilafira@gmail.com', '1234567890', 'Offline', 1591633681),
+(3, 'Amanda', 'Manda', 'Miss', '089876543210', 'amanda@gmail.com', '1234567890', 'Offline', 1591633681),
+(4, 'Demo', 'Demo', '', '0123456789', 'demo@mail.com', '1234567890', 'Offline', 1591633681),
+(5, 'Admin', 'Administrator', '', '081209238741', 'admin@mail.com', '1234567890', 'Offline', 1591633681),
+(6, 'Petugas Kebersihan RT 1', '', '', '0812647349823', '', '1234567890', 'Offline', 1591633681),
+(7, 'Petugas Kebersihan RT 2', '', '', '081289428231', '', '1234567890', 'Offline', 1591633681),
+(8, 'Petugas Kebersihan RT 3', '', '', '0812934587742', '', '1234567890', 'Offline', 1591633681),
+(9, 'Rina', 'Rina', '', '081284892625', 'rina@mail.com', '1234567890', 'Offline', 134123);
 
 --
 -- Indexes for dumped tables
@@ -205,13 +211,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `chart`
 --
 ALTER TABLE `chart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `groups`
 --
 ALTER TABLE `groups`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `profilepictures`
@@ -229,7 +235,7 @@ ALTER TABLE `sampah`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
