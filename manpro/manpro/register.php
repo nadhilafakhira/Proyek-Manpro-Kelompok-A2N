@@ -12,7 +12,7 @@ $useremail = $_COOKIE['useremail'];}
 	                                
 if(isset($_POST['valz'])){               
 	           $_POST['valz'];
-              $sirname = $_POST["valz1"]; //Sirname variable
+              $surname = $_POST["valz1"]; //surname variable
 			   $email = $_POST["valz2"];	//Email variable
 			  $password =$_POST["valz4"];	        //password variable
               $institution =$_POST["valz6"];       //institution variable
@@ -20,7 +20,7 @@ if(isset($_POST['valz'])){
 	          $firstname=$_POST["valz"];//Firstname variable
 						
 	      
-		  $sql="SELECT * FROM Users  WHERE Email='$email' && Sirname='$sirname'";
+		  $sql="SELECT * FROM Users  WHERE Email='$email' && surname='$surname'";
                    $resultn=mysqli_query($db,$sql);                    
                          if($rowcount=mysqli_num_rows($resultn)==0)
                          {
@@ -28,7 +28,8 @@ if(isset($_POST['valz'])){
                                  $found=mysqli_query($db,$sqlp);
                                if($rowcount=mysqli_num_rows($found)==0)
                                {
-                               	 $enter="INSERT INTO Users (Firstname,Sirname,Email,Password,Institution,Phone) VALUES('$firstname','$sirname','$email','$password','$institution','$phone')";
+                               	 // $enter="INSERT INTO Users (Firstname,surname,Email,Password,Institution,Phone) VALUES('$firstname','$surname','$email','$password','$institution','$phone')";
+                               	 $enter="INSERT INTO Users (Firstname,surname,Email,Password,Phone) VALUES('$firstname','$surname','$email','$password','$phone')";
                                   $db->query($enter);
 								  
 								   $messaged="Now that your account is set up, you are ready to get started submit your first proposal on www.nhsrc-mw.com<br/>Thanks for signing up! <br/> 
@@ -160,7 +161,7 @@ if(isset($_POST['postid'])){
                                    $idb= $found['id'];
   	                        }
 							  
-										$sql ="SELECT * FROM Profilepictures WHERE ids='$1' && Category='User' ";
+										$sql ="SELECT * FROM Profilepictures WHERE ids='$idb' && Category='User' ";
                                                 $rget = mysqli_query($db,$sql);
 												$num=mysqli_num_rows($rget);
                                                 if($num!=0){
@@ -251,7 +252,7 @@ if(isset($_POST['loadid'])){
                                    $idb= $found['id'];
   	                        }
 							  
-										$sql ="SELECT * FROM Profilepictures WHERE ids='$1' && Category='User' ";
+										$sql ="SELECT * FROM Profilepictures WHERE ids='$idb' && Category='User' ";
                                                 $rget = mysqli_query($db,$sql);
 												$num=mysqli_num_rows($rget);
                                                 if($num!=0){
@@ -483,7 +484,7 @@ if(isset($_POST['Valuedel'])){
                                    $idb= $found['id'];
   	                        }
 							  
-										$sql ="SELECT * FROM Profilepictures WHERE ids='$1' && Category='User' ";
+										$sql ="SELECT * FROM Profilepictures WHERE ids= 'id' && Category='User' ";
                                                 $rget = mysqli_query($db,$sql);
 												$num=mysqli_num_rows($rget);
                                                 if($num!=0){
@@ -600,7 +601,7 @@ if(isset($_POST['txtpost'])){
                                    $idb= $found['id'];
   	                        }
 							  
-										$sql ="SELECT * FROM Profilepictures WHERE ids='$id' && Category='Administrator' ";
+										$sql ="SELECT * FROM Profilepictures WHERE ids= '$idb' && Category='Administrator' ";
                                                 $rget = mysqli_query($db,$sql);
 												$num=mysqli_num_rows($rget);
                                                 if($num!=0){
@@ -661,4 +662,3 @@ if(isset($_POST['txtpost'])){
 	
 } 
 ?>
-

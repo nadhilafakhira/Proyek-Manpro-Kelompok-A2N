@@ -1,11 +1,11 @@
 
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">	
-	<head>
+<html dir="ltr" lang="en-US">   
+    <head>
 <link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#FFFFFF">
+<meta name="theme-color" content="#ffffff">
     <meta charset="utf-8">
     <title>PHP CHART</title>
      <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
@@ -29,12 +29,12 @@
 
   <script src="script.responsive.js"></script>
   <script type="text/javascript"> 
- 	$(document).ready(function(){
+    $(document).ready(function(){
  
-    	$("#btn").click(function() {
-    	            swal({
-    	    text: "Enter First name",
-    	    html:true,   
+        $("#btn").click(function() {
+                    swal({
+            text: "Enter First name",
+            html:true,   
             title:"<div class='checkout-wrap' style='padding-bottom:3px;'><ul class='checkout-bar'><li class='active'></li><li class='next'></li><li class=''></li><li class=''></li><li class=''></li><li class=''></li><li class=''></li></ul></div>",              
             type:"input",
             showCancelButton: true,   
@@ -47,8 +47,8 @@
             if (inputValue === "") {
                 swal.showInputError("Nama mu siapa !");     
                 return false;
-            }   	
-    	 swal({
+            }       
+         swal({
             text: "masukin nama panggilan mu:",   
             html:true,  
             title:"<div class='checkout-wrap' style='padding-bottom:3px;'><ul class='checkout-bar'><li class='visited first'></li><li class='active'></li><li class='next'></li><li class=''></li><li class=''></li><li class=''></li><li class=''></li></ul></div>",                
@@ -56,15 +56,15 @@
             showCancelButton: true,   
             closeOnConfirm: false,   
             animation: "slide-from-top",   
-            inputPlaceholder: "Sirname" 
+            inputPlaceholder: "Surname" 
         },
         function(inputValue1){
             if (inputValue1 === false) return false;      
             if (inputValue1 === "") {
                 swal.showInputError("Masukin nama panggilan mu ya !");     
                 return false;
-            }  	
-    	 swal({
+            }   
+         swal({
              
             text: " email addressnya:", 
              html:true,
@@ -115,10 +115,10 @@
                 swal.showInputError("Please enter your password again!");     
                 return false;
             }else if(inputValue4!=inputValue5){
-            	    swal.showInputError("Password dont match try again!");     
+                    swal.showInputError("Password dont match try again!");     
                 return false;     
                   }
-    	     swal({
+             swal({
              
             text: "Institution/College:", 
             html:true,
@@ -138,14 +138,14 @@
             }
                   var vals;var vals1;var vals2;var vals3;var vals4;var vals5;var vals6;var vals7;
                   //var vals1;
-    	 		vals=inputValue; vals1=inputValue1;	vals2=inputValue2;
+                vals=inputValue; vals1=inputValue1; vals2=inputValue2;
                 vals4=inputValue4;vals6=inputValue6;
-                    	 		vals7=inputValue7;
+                                vals7=inputValue7;
              $.ajax ({
             type : 'POST',
             url: "register.php",
             data: { valz : vals,valz1:vals1,valz2:vals2,
-            	    valz4:vals4,valz6:vals6,valz7:vals7 },
+                    valz4:vals4,valz6:vals6,valz7:vals7 },
             success: function(result) {
                 if(result=="Now"){
                 swal("Account created successfully", "", "success" ); 
@@ -153,19 +153,19 @@
                 }
                 else if(result=="pass")
                      {
-                	   sweetAlert("Oops...", "Password too weak use numbers and letters!", "error");
-                	}
+                       sweetAlert("Oops...", "Password too weak use numbers and latters!", "error");
+                    }
                 else{
-                	   sweetAlert("Oops...", "It seems you arleady have an account try again!", "error");
-                	}
+                       sweetAlert("Oops...", "It seems you arleady have an account try again!", "error");
+                    }
             }
         });                
             });  
             }); 
-            });	  }); }); 	});        
+            });   }); });   });        
     });});
 });
- </script>           				                                   				                                         				                          				          				
+ </script>                                                                                                                                                                                                  
    <script type="text/javascript">
         function changeFlag() {$("#dvFlag").attr('class', $("#CountryList").val().toLowerCase());}
  </script>
@@ -179,8 +179,8 @@
 </head>
 <body>
 <?php
-	$page = 'chat';
-	include_once "menu.php"; 
+    $page = 'chat';
+    include_once "menu.php"; 
 ?>
 <br><br>
 <div id="art-main">
@@ -200,20 +200,20 @@
                     <div id="art-flash-container">
                     <object width="900" height="225" id="art-flash-object" data="images/flash.swf" type="application/x-shockwave-flash">
                         <param name="quality" value="high">
-                    	<param name="scale" value="exactfit">	
-		
-	              	<param name="wmode" value="transparent">
-                    	<param name="flashvars" value="color1=0xFFFFFF&amp;alpha1=.70&amp;framerate1=24&amp;loop=true&amp;wmode=transparent">
+                        <param name="scale" value="exactfit">   
+        
+                    <param name="wmode" value="transparent">
+                        <param name="flashvars" value="color1=0xFFFFFF&amp;alpha1=.70&amp;framerate1=24&amp;loop=true&amp;wmode=transparent">
                         <param name="swfliveconnect" value="true">
                         <!--[if !IE]>-->
                         <object type="application/x-shockwave-flash" data="images/flash.swf" width="900" height="225">
                             <param name="quality" value="high">
-                    	    <param name="scale" value="exactfit">
+                            <param name="scale" value="exactfit">
                             <param name="wmode" value="transparent">
-                                                    	    <param name="flashvars" value="color1=0xFFFFFF&amp;alpha1=.70&amp;framerate1=24&amp;loop=true&amp;wmode=transparent">
+                                                            <param name="flashvars" value="color1=0xFFFFFF&amp;alpha1=.70&amp;framerate1=24&amp;loop=true&amp;wmode=transparent">
                             <param name="swfliveconnect" value="true">
                         <!--<![endif]-->
-                          	
+                            
                         <!--[if !IE]>-->
                         </object>
                         <!--<![endif]-->
@@ -222,56 +222,56 @@
                     </div>
 <nav class="art-nav">
     <ul class="art-hmenu"><li><a href="index.php" >WELCOME</a></li>
-    	</ul> 
+        </ul> 
  
     </nav>                    
 </header>
-	<div class="art-layout-wrapper">
+    <div class="art-layout-wrapper">
                 <div class="art-content-layout">
                     <div class="art-content-layout-row">
                         <div class="art-layout-cell art-content"><article class="art-post art-article">                                
                                 <div class="art-postcontent art-postcontent-0 clearfix">
-                                	       
-                                	<div class="art-content-layout layout-item-0">
-	  <div class="art-content-layout-row">
-	  	<div class="art-layout-cell layout-item-1" style="width: 60%;color:white;background-color:#363636;border-radius:0%; " >
+                                           
+                                    <div class="art-content-layout layout-item-0">
+      <div class="art-content-layout-row">
+        <div class="art-layout-cell layout-item-1" style="width: 60%;color:white;background-color:#363636;border-radius:0%; " >
         &nbsp; &nbsp; &nbsp;<span style="font-family: 'Times New Roman'; font-weight: bold;">Selamat datang di tempat untuk melakukan komunikasi</span>
          
          </div>
 
  <div class="art-layout-cell" style="width: 50%" >
- 	
+    
         <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        	<span style="font-family: 'Times New Roman'; font-size: 22px;">
-        		<span style="font-weight: bold; color: rgb(255, 255, 255);">Sudah punya akun? Jika belum, Register dulu ya!</span>
-        		</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
-        <p>	<center> <div id="error" style="width:60%";> </div> </center>
+            <span style="font-family: 'Times New Roman'; font-size: 22px;">
+                <span style="font-weight: bold; color: rgb(255, 255, 255);">Sudah punya akun? Jika belum, Register dulu ya!</span>
+                </span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+        <p> <center> <div id="error" style="width:60%";> </div> </center>
                 </p>
-        	<form class="form-login" method="post" id="login-form">
-        		<p>&nbsp; &nbsp; &nbsp;&nbsp;
+            <form class="form-login" method="post" id="login-form">
+                <p>&nbsp; &nbsp; &nbsp;&nbsp;
        <span style="font-weight: bold; font-family: 'Times New Roman'; font-size: 16px; color: rgb(255, 255, 255);">
-       	Email address:</span><span style="font-weight: bold; font-family: 'Times New Roman'; font-size: 16px;">&nbsp;</span>
-	<input type="email" class="form-control" placeholder="email address" name="user_email" id="user_email" />
-       	</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="font-weight: bold;">&nbsp;
-       		<span style="font-family: 'Times New Roman'; font-size: 16px; color: #FFFFFF;">Password</span>
-       		<span style="font-family: 'Times New Roman'; font-size: 16px; color: #FFFFFF;">:</span></span>
-			<input type="password" class="form-control" placeholder="Password" name="password" id="password" />       		
-       		</p><p style="text-align: -webkit-auto;">
-       			<label class="art-checkbox">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-       				 &nbsp; &nbsp; &nbsp;
-       		</label>
-       		 <button class="art-button" name="login_button" id="login_button" >&nbsp;       		 
-       		 <span class="glyphicon glyphicon-log-in"> </span> &nbsp; Sign In </button>
-       	 
-       		  <button class="art-button" name="login_button" id="btn" >&nbsp;       		 
-       		 <span class="glyphicon glyphicon-user"> </span> &nbsp; Register </button> 
-       	    
-       	    </p>
-    	   </form>    	  
-    	   
-	</div>
-		
-	 </div>
+        Email address:</span><span style="font-weight: bold; font-family: 'Times New Roman'; font-size: 16px;">&nbsp;</span>
+    <input type="email" class="form-control" placeholder="email address" name="user_email" id="user_email" />
+        </p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="font-weight: bold;">&nbsp;
+            <span style="font-family: 'Times New Roman'; font-size: 16px; color: #FFFFFF;">Password</span>
+            <span style="font-family: 'Times New Roman'; font-size: 16px; color: #FFFFFF;">:</span></span>
+            <input type="password" class="form-control" placeholder="Password" name="password" id="password" />             
+            </p><p style="text-align: -webkit-auto;">
+                <label class="art-checkbox">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                     &nbsp; &nbsp; &nbsp;
+            </label>
+             <button class="art-button" name="login_button" id="login_button" >&nbsp;                
+             <span class="glyphicon glyphicon-log-in"> </span> &nbsp; Sign In </button>
+         
+              <button class="art-button" name="login_button" id="btn" onclick="window.location='register_form.php'">&nbsp;               
+             <span class="glyphicon glyphicon-user"> </span> &nbsp; Register </button> 
+            
+            </p>
+           </form>        
+           
+    </div>
+        
+     </div>
 </div>
 </div>
 
