@@ -4,7 +4,7 @@ include 'include/header.php'; ?>
 <div class="container">
 
   <div class="starter-template">
-  	<body style="background-image: url('background.JPEG');">
+  	<body style="background-image: url('background.jpg');">
   		<section style="background-color: white">
     <h1>Welcome! </h1> 
     <h3>Ingin mengakses informasi tentang website kami? Akses menu Utama.<br>
