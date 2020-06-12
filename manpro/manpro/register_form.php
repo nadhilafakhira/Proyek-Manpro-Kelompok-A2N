@@ -3,7 +3,7 @@
 	include 'include/header.php'; 
 	include 'db_connect.php'; 
 
-	if($_POST["Save"]){
+	if(@$_POST["Save"]){
 		$Firstname = $_POST["Firstname"];
 		$Surname = $_POST["Surname"];
 		$Title = $_POST["Title"];
